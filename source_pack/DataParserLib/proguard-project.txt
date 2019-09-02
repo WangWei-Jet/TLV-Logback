@@ -1,0 +1,72 @@
+
+-dontshrink
+-dontoptimize
+-keeppackagenames com.oneway,com.oneway.*,com.oneway.libset,com.oneway.libset.**
+-dontpreverif
+
+-repackageclasses ''
+-allowaccessmodification
+
+-optimizations !code/simplification/arithmetic
+
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable,InnerClasses
+
+-keepattributes *Annotation*
+
+-keep public class java.lang.*
+
+-keepclassmembers class **.R$* {
+  public static <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclassmembers class * extends java.lang.Enum {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+
+-keep,allowshrinking class com.oneway.libset.App {
+	public static <methods>;
+}
+-keep,allowshrinking class com.oneway.libset.ParserFactory {
+    <methods>;
+}
+-keep,allowshrinking class com.oneway.libset.tlv.TlvParser {
+    *;
+}
+-keep,allowshrinking class com.oneway.libset.tlv.SingleTLVParseResult {
+    *;
+}
+-keep,allowshrinking class com.oneway.libset.tlv.CommonTlvParserImpl.java {
+    *;
+}
+-keep,allowshrinking class com.oneway.libset.tlv.TLVParseResult {
+    *;
+}
+-keep class com.oneway.libset.tlv.TLVParseResult$* {
+    *;
+}
+
+-keep class com.oneway.libset.msg.**{
+	*;
+}
+-keep,allowshrinking class com.oneway.libset.tlv.entity.TLV {
+    *;
+}
+-keep,allowshrinking class com.oneway.utils.CustomLogger {
+    *;
+}

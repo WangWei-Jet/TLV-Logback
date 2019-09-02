@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resultInstruction>
+	<resultCode>
+		<code>00</code>
+		<comments>成功</comments>
+	</resultCode>
+	<resultCode>
+		<code>01</code>
+		<comments>无效TAG</comments>
+	</resultCode>
+	<resultCode>
+		<code>02</code>
+		<comments>未发现LEN</comments>
+	</resultCode>
+	<resultCode>
+		<code>03</code>
+		<comments>LEN错误</comments>
+	</resultCode>
+	<resultCode>
+		<code>04</code>
+		<comments>VALUE长度与LEN不一致</comments>
+	</resultCode>
+	<resultCode>
+		<code>05</code>
+		<comments>LEN不能以80开头</comments>
+	</resultCode>
+	<resultCode>
+		<code>101</code>
+		<comments>未设置tag</comments>
+	</resultCode>
+	<resultCode>
+		<code>102</code>
+		<comments>未知TAG</comments>
+	</resultCode>
+	<resultCode>
+		<code>99</code>
+		<comments>异常</comments>
+	</resultCode>
+</resultInstruction>
